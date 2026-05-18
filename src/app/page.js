@@ -1,4 +1,12 @@
 import Link from "next/link";
+import {
+  Truck,
+  Microscope,
+  FlaskConical,
+  HardHat,
+  Scale,
+  ShieldCheck,
+} from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -22,24 +30,17 @@ export default function HomePage() {
             </h1>
 
             <p className="hero-sub">
-              Colectăm, analizăm și rerafinăm uleiul uzat prin
-              procese termo-chimice conform standardelor BAT.
-              De la colectare națională la diagnoză moleculară
-              pentru flote industriale.
+              Colectăm uleiul uzat de la tine. Îl analizăm în
+              laboratorul propriu. Îl rerafinăm în combustibil
+              industrial. Totul documentat, totul trasabil.
             </p>
 
             <div className="hero-btns">
-              <Link
-                href="/colectare"
-                className="btn btn-green"
-              >
+              <Link href="/colectare" className="btn btn-green">
                 Comandă Colectare
               </Link>
 
-              <Link
-                href="/laborator"
-                className="btn btn-outline-light"
-              >
+              <Link href="/laborator" className="btn btn-outline-light">
                 Diagnoză Flotă
               </Link>
             </div>
@@ -51,7 +52,6 @@ export default function HomePage() {
                 <div className="stat-num">
                   48<span>h</span>
                 </div>
-
                 <div className="stat-label">
                   Timp maxim de răspuns național
                 </div>
@@ -61,7 +61,6 @@ export default function HomePage() {
                 <div className="stat-num">
                   4<span>+</span>
                 </div>
-
                 <div className="stat-label">
                   Piloni de servicii integrate
                 </div>
@@ -73,7 +72,6 @@ export default function HomePage() {
                 <div className="stat-num">
                   100<span>%</span>
                 </div>
-
                 <div className="stat-label">
                   Conformitate legală garantată
                 </div>
@@ -83,7 +81,6 @@ export default function HomePage() {
                 <div className="stat-num">
                   BAT
                 </div>
-
                 <div className="stat-label">
                   Standarde europene de mediu
                 </div>
@@ -98,10 +95,7 @@ export default function HomePage() {
 
           <div className="pillars-header">
             <div>
-              <div className="section-tag green">
-                Platforma Noastră
-              </div>
-
+              <div className="section-tag green">Platforma Noastră</div>
               <h2>
                 Patru piloni.
                 <br />
@@ -109,15 +103,7 @@ export default function HomePage() {
               </h2>
             </div>
 
-            <p
-              style={{
-                maxWidth: "340px",
-                color: "var(--gray-500)",
-                fontSize: ".9rem",
-                fontWeight: "300",
-                lineHeight: "1.7",
-              }}
-            >
+            <p style={{ maxWidth: "340px", color: "var(--gray-500)", fontSize: ".9rem", fontWeight: "300", lineHeight: "1.7" }}>
               De la materia primă până la diagnoza moleculară și
               rerafinare — Allied acoperă întregul ciclu.
             </p>
@@ -125,84 +111,51 @@ export default function HomePage() {
 
           <div className="pillars-grid">
 
-            <Link
-              href="/colectare"
-              className="pillar-card"
-            >
-              <div className="pillar-icon g">🚛</div>
-
-              <div className="pillar-num">
-                Pilonul 01
+            <Link href="/colectare" className="pillar-card">
+              <div className="pillar-icon g">
+                <Truck size={22} color="var(--green-mid)" />
               </div>
-
-              <div className="pillar-title">
-                Colectare & Logistică
-              </div>
-
+              <div className="pillar-num">Pilonul 01</div>
+              <div className="pillar-title">Colectare & Logistică</div>
               <p className="pillar-desc">
-                Flotă proprie, documentație ADR completă,
-                acoperire națională în 48h.
+                Flotă ADR proprie, documentație completă,
+                ridicare în 48h oriunde în România.
               </p>
             </Link>
 
-            <Link
-              href="/laborator"
-              className="pillar-card"
-            >
-              <div className="pillar-icon b">🔬</div>
-
-              <div className="pillar-num">
-                Pilonul 02
+            <Link href="/laborator" className="pillar-card">
+              <div className="pillar-icon b">
+                <Microscope size={22} color="var(--blue-mid)" />
               </div>
-
-              <div className="pillar-title">
-                Diagnoză Moleculară
-              </div>
-
+              <div className="pillar-num">Pilonul 02</div>
+              <div className="pillar-title">Diagnoză Moleculară</div>
               <p className="pillar-desc">
-                Analiză spectrală a uleiului uzat.
-                Detectăm defecțiunile înainte să devină
-                catastrofale.
+                Spectroscopie ICP-OES și FTIR. Raport în 24h —
+                defecțiunile sunt detectate înainte să devină scumpe.
               </p>
             </Link>
 
-            <Link
-              href="/rafinare"
-              className="pillar-card"
-            >
-              <div className="pillar-icon g">⚗️</div>
-
-              <div className="pillar-num">
-                Pilonul 03
+            <Link href="/rafinare" className="pillar-card">
+              <div className="pillar-icon g">
+                <FlaskConical size={22} color="var(--green-mid)" />
               </div>
-
-              <div className="pillar-title">
-                Rerafinare & Energie
-              </div>
-
+              <div className="pillar-num">Pilonul 03</div>
+              <div className="pillar-title">Rerafinare & Energie</div>
               <p className="pillar-desc">
-                Combustibil Ecotherm Light 4 produs prin
-                procese BAT.
+                Combustibil Ecotherm Light 4, 10.500 kcal/kg.
+                Produs prin procese BAT, livrat în cuburi sigilate.
               </p>
             </Link>
 
-            <Link
-              href="/cariere"
-              className="pillar-card"
-            >
-              <div className="pillar-icon b">👷</div>
-
-              <div className="pillar-num">
-                Pilonul 04
+            <Link href="/cariere" className="pillar-card">
+              <div className="pillar-icon b">
+                <HardHat size={22} color="var(--blue-mid)" />
               </div>
-
-              <div className="pillar-title">
-                Elite & Cariere
-              </div>
-
+              <div className="pillar-num">Pilonul 04</div>
+              <div className="pillar-title">Elite & Cariere</div>
               <p className="pillar-desc">
-                Căutăm ingineri chimiști și specialiști
-                ADR pentru echipa Allied.
+                Nu angajăm oameni care bifează cerințe.
+                Căutăm specialiști care știu exact ce fac.
               </p>
             </Link>
 
@@ -216,10 +169,7 @@ export default function HomePage() {
           <div className="why-grid">
 
             <div>
-              <div className="section-tag green">
-                De ce Allied
-              </div>
-
+              <div className="section-tag green">De ce Allied</div>
               <h2>
                 Nu suntem un simplu colector.
                 <br />
@@ -230,44 +180,42 @@ export default function HomePage() {
 
                 <div className="why-item">
                   <div className="why-icon g">
-                    ⚖️
+                    <Scale size={18} color="var(--green-mid)" />
                   </div>
-
                   <div>
                     <h4>Conformitate Totală</h4>
-
                     <p>
-                      Documentație ADR completă la fiecare
-                      ridicare.
+                      Formular de acompaniere, fișă de securitate,
+                      raport de transfer — complet, la fiecare ridicare.
+                      Garda de Mediu nu va găsi nimic de obiectat.
                     </p>
                   </div>
                 </div>
 
                 <div className="why-item">
                   <div className="why-icon b">
-                    🔬
+                    <Microscope size={18} color="var(--blue-mid)" />
                   </div>
-
                   <div>
                     <h4>Laborator Propriu</h4>
-
                     <p>
-                      Analiză spectrală a uleiului uzat.
+                      Nu trimitem probe la terți. ICP-OES, FTIR,
+                      viscozimetru — totul analizat intern,
+                      rezultate în 24h.
                     </p>
                   </div>
                 </div>
 
                 <div className="why-item">
                   <div className="why-icon g">
-                    🔒
+                    <ShieldCheck size={18} color="var(--green-mid)" />
                   </div>
-
                   <div>
                     <h4>Garanție Anti-Fraudă</h4>
-
                     <p>
-                      Combustibil livrat în cuburi sigilate
-                      de laborator.
+                      Combustibilul Allied vine cu buletin de analiză
+                      pentru fiecare lot. Cuburi sigilate, trasabilitate
+                      completă de la colectare la livrare.
                     </p>
                   </div>
                 </div>
@@ -279,66 +227,32 @@ export default function HomePage() {
               <div className="stats-grid-alt">
 
                 <div className="stat-alt">
-                  <div className="n">
-                    48<span>h</span>
-                  </div>
-
-                  <div className="l">
-                    Timp maxim de răspuns
-                  </div>
+                  <div className="n">48<span>h</span></div>
+                  <div className="l">Timp maxim de răspuns</div>
                 </div>
 
                 <div className="stat-alt">
-                  <div className="n">
-                    24<span>h</span>
-                  </div>
-
-                  <div className="l">
-                    Livrare raport diagnoză
-                  </div>
+                  <div className="n">24<span>h</span></div>
+                  <div className="l">Livrare raport diagnoză</div>
                 </div>
 
                 <div className="stat-alt">
-                  <div className="n">
-                    80<span>%</span>
-                  </div>
-
-                  <div className="l">
-                    Reducere amprentă carbon
-                  </div>
+                  <div className="n">80<span>%</span></div>
+                  <div className="l">Reducere amprentă carbon</div>
                 </div>
 
                 <div className="stat-alt">
-                  <div className="n">
-                    0<span>%</span>
-                  </div>
-
-                  <div className="l">
-                    Adaos comercial
-                  </div>
+                  <div className="n">0<span>%</span></div>
+                  <div className="l">Adaos comercial</div>
                 </div>
 
               </div>
 
-              <div
-                style={{
-                  marginTop: "1.5rem",
-                  display: "flex",
-                  gap: "1rem",
-                  flexWrap: "wrap",
-                }}
-              >
-                <Link
-                  href="/fleet-gold"
-                  className="btn btn-green"
-                >
+              <div style={{ marginTop: "1.5rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+                <Link href="/fleet-gold" className="btn btn-green">
                   Program Fleet Gold
                 </Link>
-
-                <Link
-                  href="/contact"
-                  className="btn btn-outline-dark"
-                >
+                <Link href="/contact" className="btn btn-outline-dark">
                   Contactează-ne
                 </Link>
               </div>
@@ -350,15 +264,13 @@ export default function HomePage() {
 
       <section className="cta-banner">
         <div className="container">
-
           <div className="cta-inner">
 
             <div>
               <h2>
-                Pregătit să transformi uleiul uzat
-                într-un avantaj competitiv?
+                Uleiul uzat este o problemă de conformitate
+                sau o sursă de valoare. Depinde cu cine lucrezi.
               </h2>
-
               <p>
                 Colectare în 48h, diagnoză moleculară și
                 combustibil rerafinat.
@@ -366,22 +278,14 @@ export default function HomePage() {
             </div>
 
             <div className="cta-btns">
-
-              <Link
-                href="/colectare"
-                className="btn btn-green"
-              >
+              <Link href="/colectare" className="btn btn-green">
                 Comandă Colectare
               </Link>
-
-              <Link
-                href="/contact"
-                className="btn btn-outline-light"
-              >
+              <Link href="/contact" className="btn btn-outline-light">
                 Vorbește cu un specialist
               </Link>
-
             </div>
+
           </div>
         </div>
       </section>

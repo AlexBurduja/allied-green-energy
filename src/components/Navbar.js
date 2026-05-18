@@ -2,12 +2,30 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState, useEffect, useRef } from "react";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!open) return;
+    function handleClickOutside(e) {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [open]);
 
   return (
-    <nav>
+    <nav ref={navRef}>
       <div className="nav-inner">
 
         <Link href="/" className="logo">
@@ -19,11 +37,22 @@ export default function Navbar() {
 
           <div className="logo-text">
             Allied Green Energy
-            <span>Rerafinare · Diagnoză · Logistică</span>
+            <span>Rafinare · Diagnoză · Logistică</span>
           </div>
         </Link>
 
-        <ul className="nav-links">
+        <button
+          className={`hamburger${open ? " is-open" : ""}`}
+          onClick={() => setOpen((v) => !v)}
+          aria-label="Deschide meniu"
+          aria-expanded={open}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <ul className={`nav-links${open ? " open" : ""}`}>
 
           <li>
             <Link
@@ -40,15 +69,6 @@ export default function Navbar() {
               className={pathname === "/laborator" ? "active" : ""}
             >
               Laborator
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              href="/fleet-gold"
-              className={pathname === "/fleet-gold" ? "active" : ""}
-            >
-              Fleet Gold
             </Link>
           </li>
 
@@ -71,6 +91,15 @@ export default function Navbar() {
           </li>
 
           <li>
+            <Link
+              href="/fleet-gold"
+              className={pathname === "/fleet-gold" ? "activeGold" : ""}
+            >
+              Fleet Gold
+            </Link>
+          </li>
+
+          <li>
             <Link href="/contact" className="nav-cta">
               Contact
             </Link>
@@ -80,4 +109,4 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}   
+}

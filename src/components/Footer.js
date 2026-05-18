@@ -19,13 +19,13 @@ export default function Footer() {
 
               <div className="logo-text" style={{ color: "white" }}>
                 Allied Green Energy
-                <span>Rerafinare · Diagnoză · Logistică</span>
+                <span>Rafinare · Diagnoză · Logistică</span>
               </div>
 
             </Link>
 
             <p>
-              Operator autorizat pentru colectare și rerafinare
+              Operator autorizat pentru colectare și Rafinare
               uleiuri uzate. Procese termo-chimice conform BAT.
             </p>
 
@@ -38,7 +38,7 @@ export default function Footer() {
               <li><Link href="/colectare">Colectare & Logistică</Link></li>
               <li><Link href="/laborator">Diagnoză Moleculară</Link></li>
               <li><Link href="/fleet-gold">Fleet Gold</Link></li>
-              <li><Link href="/rafinare">Rerafinare</Link></li>
+              <li><Link href="/rafinare">Rafinare</Link></li>
             </ul>
           </div>
 

@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Rerafinare & Energie — Allied Green Energy",
+  description: "Combustibil Ecotherm Light 4 produs prin procese BAT. Putere calorică 10.500 kcal/kg.",
+};
+
 export default function RafinarePage() {
   return (
     <>
