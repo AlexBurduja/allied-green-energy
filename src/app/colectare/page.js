@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { Truck, Scale, Wrench, Settings, Package } from "lucide-react";
+import { Truck, Scale, MapPin, CheckCircle, XCircle, HardHat, Tractor, Factory } from "lucide-react";
 
 export const metadata = {
-  title: "Colectare & Logistică — Allied Green Energy",
-  description: "Colectare ulei uzat cu flotă ADR autorizată, acoperire națională în 48–72h.",
+  title: "Colectare Ulei Uzat — Allied Green Energy",
+  description: "Colectare ulei uzat autorizat ADR, acoperire națională în 48h. Documentație completă pentru Garda de Mediu. Transport, construcții, agricultură, industrie.",
+  keywords: "colectare ulei uzat, ulei uzat Romania, colectare ulei motor, gestiune ulei uzat, ADR, Garda de Mediu, colectare deseuri periculoase",
 };
 
 export default function ColectarePage() {
@@ -122,25 +123,82 @@ export default function ColectarePage() {
         </div>
       </section>
 
+      <section className="collect-guide-section">
+        <div className="container">
+
+          <div className="section-tag green">Ghid de Colectare</div>
+          <h2>Ce colectăm — și ce nu.</h2>
+          <p style={{ color: "var(--gray-500)", fontSize: ".9rem", fontWeight: "300", lineHeight: "1.75", maxWidth: "540px", marginTop: ".5rem" }}>
+            Amestecarea uleiului uzat cu alți lichizi
+            compromite întregul lot și îngreunează rerafinarea.
+            Verifică lista înainte de prelevare.
+          </p>
+
+          <div className="collect-guide-grid">
+
+            <div className="collect-guide-col accept">
+              <div className="collect-guide-col-header">
+                <CheckCircle size={18} color="var(--green-mid)" />
+                <span>Acceptăm</span>
+              </div>
+              <ul>
+                {[
+                  "Ulei de motor uzat (benzină & diesel)",
+                  "Ulei de transmisie și diferențial",
+                  "Ulei hidraulic industrial",
+                  "Ulei de turbine și compresoare",
+                  "Ulei de angrenaje și reductor",
+                  "Lubrifianți industriali uzați",
+                  "Ulei de tăiere diluat (conc. ≥ 50%)",
+                ].map((item) => (
+                  <li key={item}>
+                    <CheckCircle size={13} color="var(--green-mid)" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="collect-guide-col reject">
+              <div className="collect-guide-col-header">
+                <XCircle size={18} color="var(--red)" />
+                <span>Nu acceptăm</span>
+              </div>
+              <ul>
+                {[
+                  "Antigel / lichid de răcire",
+                  "Apă sau emulsii apoase",
+                  "Solvenți și diluanți",
+                  "Benzină sau motorină",
+                  "Uleiuri alimentare sau vegetale",
+                  "Produse halogentate (PCB, CFC)",
+                  "Vopsele, lacuri sau rășini",
+                ].map((item) => (
+                  <li key={item}>
+                    <XCircle size={13} color="var(--red)" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+          </div>
+
+          <p className="collect-guide-note">
+            Nesigur? Sunați-ne înainte de prelevare —
+            consultantul nostru tehnic verifică rapid compatibilitatea produsului.
+          </p>
+
+        </div>
+      </section>
+
       <section className="segment-section">
         <div className="container">
 
-          <div className="section-tag green">Cine Lucrează cu Allied</div>
-          <h2>Colectăm de la oricine generează ulei uzat.</h2>
+          <div className="section-tag green">Industrii Deservite</div>
+          <h2>Soluție personalizată pentru fiecare sector.</h2>
 
           <div className="segment-grid" style={{ marginTop: "2.5rem" }}>
-
-            <div className="segment-card">
-              <div className="segment-icon">
-                <Wrench size={22} color="var(--green-mid)" />
-              </div>
-              <h4>Service Auto & Camioane</h4>
-              <p>
-                Emiteți uleiuri de motor, transmisie și frână
-                în cantități regulate. Allied colectează
-                săptămânal sau la cerere, cu documentație completă.
-              </p>
-            </div>
 
             <div className="segment-card">
               <div className="segment-icon">
@@ -148,15 +206,39 @@ export default function ColectarePage() {
               </div>
               <h4>Transport & Logistică</h4>
               <p>
-                Flote de camioane și utilaje generează
-                cantități semnificative. Programăm ridicările
-                în jurul orarului vostru de lucru.
+                Flote de camioane, TIR-uri și vehicule de livrare.
+                Programăm ridicările în jurul turelor de lucru —
+                fără întreruperea activității.
               </p>
             </div>
 
             <div className="segment-card">
               <div className="segment-icon">
-                <Settings size={22} color="var(--green-mid)" />
+                <HardHat size={22} color="var(--green-mid)" />
+              </div>
+              <h4>Construcții & Utilaje Grele</h4>
+              <p>
+                Excavatoare, buldozere, macarale, betoniere —
+                utilaje cu consum ridicat de ulei hidraulic și de motor.
+                Colectăm direct de pe șantier.
+              </p>
+            </div>
+
+            <div className="segment-card">
+              <div className="segment-icon">
+                <Tractor size={22} color="var(--green-mid)" />
+              </div>
+              <h4>Agricultură & Mecanizare</h4>
+              <p>
+                Tractoare, combine, irigații și utilaje agricole.
+                Adaptăm programul de ridicare la sezonul agricol
+                și la locația fermei.
+              </p>
+            </div>
+
+            <div className="segment-card">
+              <div className="segment-icon">
+                <Factory size={22} color="var(--green-mid)" />
               </div>
               <h4>Industrie & Producție</h4>
               <p>
@@ -166,19 +248,58 @@ export default function ColectarePage() {
               </p>
             </div>
 
-            <div className="segment-card">
-              <div className="segment-icon">
-                <Package size={22} color="var(--green-mid)" />
-              </div>
-              <h4>Distribuitori Lubrifianți</h4>
-              <p>
-                Oferiți clienților un serviciu complet:
-                vânzare lubrifiant plus colectare ulei uzat
-                cu documentare legală inclusă.
+          </div>
+        </div>
+      </section>
+
+      <section className="coverage-section">
+        <div className="container">
+
+          <div className="coverage-header">
+            <div>
+              <div className="section-tag green">Acoperire Națională</div>
+              <h2>Toate cele 41 de județe.<br />Plus Municipiul București.</h2>
+              <p style={{ color: "var(--gray-500)", fontSize: ".9rem", fontWeight: "300", lineHeight: "1.75", maxWidth: "480px", marginTop: ".5rem" }}>
+                Flotă ADR proprie pe tot teritoriul României.
+                Ridicare garantată în maximum 48h de la solicitare,
+                oriunde te afli.
               </p>
             </div>
 
+            <div className="coverage-stats">
+              <div className="coverage-stat">
+                <div className="n">42</div>
+                <div className="l">Județe acoperite</div>
+              </div>
+              <div className="coverage-stat">
+                <div className="n">48<span>h</span></div>
+                <div className="l">Timp maxim ridicare</div>
+              </div>
+              <div className="coverage-stat">
+                <div className="n">ADR</div>
+                <div className="l">Flotă autorizată</div>
+              </div>
+            </div>
           </div>
+
+          <div className="county-grid">
+            {[
+              "Alba","Arad","Argeș","Bacău","Bihor","Bistrița-Năsăud",
+              "Botoșani","Brăila","Brașov","București","Buzău",
+              "Călărași","Caraș-Severin","Cluj","Constanța","Covasna",
+              "Dâmbovița","Dolj","Galați","Giurgiu","Gorj","Harghita",
+              "Hunedoara","Ialomița","Iași","Ilfov","Maramureș",
+              "Mehedinți","Mureș","Neamț","Olt","Prahova",
+              "Sălaj","Satu Mare","Sibiu","Suceava","Teleorman",
+              "Timiș","Tulcea","Vâlcea","Vaslui","Vrancea",
+            ].map((county) => (
+              <div key={county} className="county-chip">
+                <MapPin size={10} />
+                {county}
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
     </>

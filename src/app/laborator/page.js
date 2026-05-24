@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { TestTube, Droplets, Flame, Package, FlaskConical, FileText } from "lucide-react";
+import { TestTube, Droplets, Flame, Package, FlaskConical, FileText, Cpu, Microscope, Zap } from "lucide-react";
 
 export const metadata = {
-  title: "Laborator & Diagnoză Moleculară — Allied Green Energy",
-  description: "Analiză spectrală a uleiului uzat. Detectăm defecțiunile înainte să devină catastrofale.",
+  title: "Analiză Ulei Motor & Diagnoză — Allied Green Energy",
+  description: "Laborator ICP-OES și FTIR intern. Raport Semafor în 24h — detectăm uzura motorului înainte de avarie. Analize pentru flote, camioane, utilaje industriale.",
+  keywords: "analiza ulei motor, diagnoza ulei, ICP-OES, FTIR ulei, raport semafor, analiza spectrala ulei, uzura motor, diagnoza preventiva flota",
 };
 
 export default function LaboratorPage() {
@@ -145,6 +146,226 @@ export default function LaboratorPage() {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      <section className="semafor-section">
+        <div className="container">
+
+          <div className="section-tag blue">Raportul Semafor</div>
+          <h2 className="white">Ce înseamnă fiecare culoare.</h2>
+          <p style={{ color: "var(--gray-500)", fontSize: ".9rem", fontWeight: "300", lineHeight: "1.75", maxWidth: "560px", marginTop: ".5rem" }}>
+            Fiecare parametru analizat primește un cod de culoare.
+            Nu ai nevoie de cunoștințe tehnice — raportul îți spune
+            exact ce trebuie să faci și cât de urgent.
+          </p>
+
+          <div className="semafor-legend">
+            <div className="semafor-status">
+              <div className="semafor-status-dot green" />
+              <h3>Verde — OK</h3>
+              <p>Parametru în limite normale. Nicio intervenție necesară. Continuă programul de monitorizare curent.</p>
+            </div>
+            <div className="semafor-status">
+              <div className="semafor-status-dot yellow" />
+              <h3>Galben — Atenție</h3>
+              <p>Valoare apropiată de limită. Reducem intervalul de monitorizare și urmărim tendința la proba următoare.</p>
+            </div>
+            <div className="semafor-status">
+              <div className="semafor-status-dot red" />
+              <h3>Roșu — Intervenție</h3>
+              <p>Limită critică depășită. Schimb de ulei sau revizie mecanică urgentă înainte de urmatoarea cursă.</p>
+            </div>
+          </div>
+
+          <div className="semafor-table-wrap">
+            <div className="semafor-table-header">
+              <div>
+                <span className="label">Raport Diagnoză · Exemplu</span>
+                <strong>Motor Scania R500 · BV 12 XYZ · 148.320 km</strong>
+              </div>
+              <span className="badge badge-blue">PDF generat automat</span>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Parametru</th>
+                  <th>Valoare măsurată</th>
+                  <th>Limită</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Fier (Fe)</td>
+                  <td>42 ppm</td>
+                  <td>100 ppm</td>
+                  <td>
+                    <div className="semafor-td-status">
+                      <span className="dot dot-green" />
+                      Verde
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Cupru (Cu)</td>
+                  <td>18 ppm</td>
+                  <td>30 ppm</td>
+                  <td>
+                    <div className="semafor-td-status">
+                      <span className="dot dot-green" />
+                      Verde
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Plumb (Pb)</td>
+                  <td>24 ppm</td>
+                  <td>25 ppm</td>
+                  <td>
+                    <div className="semafor-td-status">
+                      <span className="dot dot-yellow" />
+                      Galben
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Glicol</td>
+                  <td>Urme detectate</td>
+                  <td>Absent</td>
+                  <td>
+                    <div className="semafor-td-status">
+                      <span className="dot dot-red" />
+                      Roșu
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Viscozitate (100°C)</td>
+                  <td>14.2 cSt</td>
+                  <td>12–16 cSt</td>
+                  <td>
+                    <div className="semafor-td-status">
+                      <span className="dot dot-green" />
+                      Verde
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Indice aciditate (TAN)</td>
+                  <td>2.8 mg KOH/g</td>
+                  <td>≤ 3.0 mg KOH/g</td>
+                  <td>
+                    <div className="semafor-td-status">
+                      <span className="dot dot-yellow" />
+                      Galben
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div className="semafor-footer">
+              <p>
+                <strong>Recomandare Allied:</strong>{" "}
+                Glicol detectat indică o infiltrare la garnitura de chiulasă.
+                Schimb de ulei imediat obligatoriu — motorul riscă gripare
+                ireversibilă în 2–4 săptămâni fără intervenție.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <section className="equip-section">
+        <div className="container">
+
+          <div className="section-tag blue">Echipamente de Analiză</div>
+          <h2>Trei niveluri de investiție.</h2>
+          <p style={{ color: "var(--gray-500)", fontSize: ".9rem", fontWeight: "300", lineHeight: "1.75", maxWidth: "540px", marginTop: ".5rem" }}>
+            De la kit-uri portabile până la spectrometre ICP-OES de laborator —
+            îți recomandăm nivelul potrivit volumului și complexității flotei tale.
+          </p>
+
+          <div className="equip-grid">
+
+            <div className="equip-card">
+              <div className="equip-card-icon">
+                <Cpu size={20} color="var(--blue-mid)" />
+              </div>
+              <div className="equip-level-badge">Level 1</div>
+              <h3>Analiză Portabilă</h3>
+              <div className="equip-price">1.000 – 1.300 EUR</div>
+              <p>
+                Viscozimetru portabil și kit colorimetric de teren.
+                Ideal pentru flote mici sau controale rapide
+                la punctul de lucru.
+              </p>
+              <ul className="equip-features">
+                <li>Viscozitate la 40°C și 100°C</li>
+                <li>Test acid/bază rapid</li>
+                <li>Detecție apă (crackle test)</li>
+                <li>Rezultate în 15 minute</li>
+              </ul>
+              <Link href="/contact" className="btn btn-outline-dark btn-full" style={{ marginTop: "auto" }}>
+                Solicită Detalii
+              </Link>
+            </div>
+
+            <div className="equip-card equip-card-featured">
+              <div className="equip-card-icon">
+                <Microscope size={20} color="var(--blue-mid)" />
+              </div>
+              <div className="equip-level-badge featured">Level 2 · Recomandat</div>
+              <h3>Laborator de Flotă</h3>
+              <div className="equip-price">4.500 – 6.500 EUR</div>
+              <p>
+                Viscozimetru automat + FTIR cu bibliotecă de referință.
+                Detectează contaminanți, degradare termică și
+                glicol fără a trimite probe la terți.
+              </p>
+              <ul className="equip-features">
+                <li>FTIR — analiză moleculară completă</li>
+                <li>Viscozimetru automat ±0,1%</li>
+                <li>Raport PDF generat automat</li>
+                <li>Bibliotecă 500+ uleiuri de referință</li>
+              </ul>
+              <Link href="/contact" className="btn btn-blue btn-full" style={{ marginTop: "auto" }}>
+                Solicită Ofertă Level 2
+              </Link>
+            </div>
+
+            <div className="equip-card">
+              <div className="equip-card-icon">
+                <Zap size={20} color="var(--blue-mid)" />
+              </div>
+              <div className="equip-level-badge">Level 3</div>
+              <h3>Laborator ICP-OES</h3>
+              <div className="equip-price">până la 60.000 EUR</div>
+              <p>
+                Spectrometru ICP-OES pentru analiză elementală completă —
+                același echipament folosit de Allied în laboratorul propriu.
+                Potrivit pentru centre de service sau raffinării interne.
+              </p>
+              <ul className="equip-features">
+                <li>30+ metale simultan (Fe, Cu, Pb, Cr…)</li>
+                <li>Precizie ppb (µg/kg)</li>
+                <li>Conformitate ISO 8217 și ISO 4406</li>
+                <li>Suport instalare și calibrare Allied</li>
+              </ul>
+              <Link href="/contact" className="btn btn-outline-dark btn-full" style={{ marginTop: "auto" }}>
+                Contactează un Specialist
+              </Link>
+            </div>
+
+          </div>
+
+          <p className="equip-note">
+            Toate echipamentele sunt livrate cu calibrare inițială și formare tehnică.
+            Allied oferă și serviciu de recalibrare anuală.
+          </p>
+
         </div>
       </section>
     </>

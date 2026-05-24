@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LogoMark from "./LogoMark";
 
 export default function Footer() {
   return (
@@ -10,18 +11,7 @@ export default function Footer() {
           <div className="footer-brand">
 
             <Link href="/" className="logo">
-
-              <div className="logo-mark">
-                <svg viewBox="0 0 20 20">
-                  <path d="M10 2L3 7v6l7 5 7-5V7L10 2zm0 2.5L15.5 8v4L10 15.5 4.5 12V8L10 4.5z"/>
-                </svg>
-              </div>
-
-              <div className="logo-text" style={{ color: "white" }}>
-                Allied Green Energy
-                <span>Rafinare · Diagnoză · Logistică</span>
-              </div>
-
+              <LogoMark height={52} />
             </Link>
 
             <p>
