@@ -6,6 +6,7 @@ import {
   HardHat,
   Scale,
   ShieldCheck,
+  Package,
 } from "lucide-react";
 
 export default function HomePage() {
@@ -160,6 +161,107 @@ export default function HomePage() {
             </Link>
 
           </div>
+        </div>
+      </section>
+
+      <section className="circle-section">
+        <div className="container">
+
+          <div className="circle-header">
+            <div className="section-tag green">Economia Circulară</div>
+            <h2>Cercul Încrederii Allied.</h2>
+            <p className="lead" style={{ textAlign: "center", margin: "0 auto" }}>
+              Patru noduri, un singur flux documentat și trasabil —
+              de la colectare la livrare și înapoi.
+            </p>
+          </div>
+
+          <div className="tc-wrap">
+            <div className="tc-diagram">
+
+              <svg className="tc-svg" viewBox="0 0 480 480" aria-hidden="true">
+                <defs>
+                  <marker id="arr-g" viewBox="0 0 8 8" refX="7" refY="4"
+                    markerWidth="5" markerHeight="5" orient="auto">
+                    <path d="M0 0 L8 4 L0 8 Z" fill="rgba(46,171,92,0.7)"/>
+                  </marker>
+                  <marker id="arr-b" viewBox="0 0 8 8" refX="7" refY="4"
+                    markerWidth="5" markerHeight="5" orient="auto">
+                    <path d="M0 0 L8 4 L0 8 Z" fill="rgba(0,92,169,0.7)"/>
+                  </marker>
+                </defs>
+
+                <circle cx="240" cy="240" r="140"
+                  fill="none"
+                  stroke="rgba(46,171,92,0.1)"
+                  strokeWidth="1"
+                  strokeDasharray="6 5"/>
+
+                {/* Colectare → Analiză */}
+                <path d="M 264.3 102.1 A 140 140 0 0 1 377.9 215.7"
+                  fill="none" stroke="rgba(46,171,92,0.45)" strokeWidth="1.5"
+                  markerEnd="url(#arr-g)"/>
+
+                {/* Analiză → Rerafinare */}
+                <path d="M 377.9 264.3 A 140 140 0 0 1 264.3 377.9"
+                  fill="none" stroke="rgba(0,92,169,0.45)" strokeWidth="1.5"
+                  markerEnd="url(#arr-b)"/>
+
+                {/* Rerafinare → Livrare */}
+                <path d="M 215.7 377.9 A 140 140 0 0 1 102.1 264.3"
+                  fill="none" stroke="rgba(46,171,92,0.45)" strokeWidth="1.5"
+                  markerEnd="url(#arr-g)"/>
+
+                {/* Livrare → Colectare */}
+                <path d="M 102.1 215.7 A 140 140 0 0 1 215.7 102.1"
+                  fill="none" stroke="rgba(0,92,169,0.45)" strokeWidth="1.5"
+                  markerEnd="url(#arr-b)"/>
+              </svg>
+
+              <div className="tc-center">
+                <div className="tc-center-label">Allied</div>
+                <div className="tc-center-sub">circular</div>
+              </div>
+
+              <div className="tc-node tc-top">
+                <div className="tc-icon g">
+                  <Truck size={18} color="var(--green-mid)" />
+                </div>
+                <div className="tc-num">01</div>
+                <div className="tc-label">Colectare</div>
+                <div className="tc-sub">48h · ADR</div>
+              </div>
+
+              <div className="tc-node tc-right">
+                <div className="tc-icon b">
+                  <Microscope size={18} color="var(--blue-mid)" />
+                </div>
+                <div className="tc-num">02</div>
+                <div className="tc-label">Analiză</div>
+                <div className="tc-sub">ICP‑OES · 24h</div>
+              </div>
+
+              <div className="tc-node tc-bottom">
+                <div className="tc-icon g">
+                  <FlaskConical size={18} color="var(--green-mid)" />
+                </div>
+                <div className="tc-num">03</div>
+                <div className="tc-label">Rerafinare</div>
+                <div className="tc-sub">Ecotherm · BAT</div>
+              </div>
+
+              <div className="tc-node tc-left">
+                <div className="tc-icon b">
+                  <Package size={18} color="var(--blue-mid)" />
+                </div>
+                <div className="tc-num">04</div>
+                <div className="tc-label">Livrare</div>
+                <div className="tc-sub">Sigilat · Trasabil</div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </section>
 

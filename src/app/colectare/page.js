@@ -21,7 +21,7 @@ export default function ColectarePage() {
             <span>Colectare & Logistică</span>
           </div>
 
-          <div className="page-hero-tag">Pilonul 01 — Verde Allied</div>
+          <div className="page-hero-tag">Pilonul 01 — Colectare & Logistică</div>
 
           <h1>
             Colectare rapidă.

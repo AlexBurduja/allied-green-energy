@@ -22,7 +22,7 @@ export default function LaboratorPage() {
           </div>
 
           <div className="page-hero-tag blue-tag">
-            Pilonul 02 — Albastru Allied
+            Pilonul 02 — Diagnoză Moleculară
           </div>
 
           <h1>
