@@ -1,6 +1,8 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
+import CounterReveal from "@/components/CounterReveal";
 import { Barlow, Barlow_Condensed } from "next/font/google";
 
 const barlow = Barlow({
@@ -30,6 +32,8 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        <ScrollReveal />
+        <CounterReveal />
         <a
           href="https://wa.me/40700000000"
           target="_blank"
