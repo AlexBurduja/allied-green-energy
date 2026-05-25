@@ -2,9 +2,9 @@ import Link from "next/link";
 import { TestTube, Droplets, Flame, Package, FlaskConical, FileText, Cpu, Microscope, Zap } from "lucide-react";
 
 export const metadata = {
-  title: "Analiză Ulei Motor & Diagnoză — Allied Green Energy",
-  description: "Laborator ICP-OES și FTIR intern. Raport Semafor în 24h — detectăm uzura motorului înainte de avarie. Analize pentru flote, camioane, utilaje industriale.",
-  keywords: "analiza ulei motor, diagnoza ulei, ICP-OES, FTIR ulei, raport semafor, analiza spectrala ulei, uzura motor, diagnoza preventiva flota",
+  title: "Analiză Ulei Industrial & Diagnoză — Allied Green Energy",
+  description: "Laborator ICP-OES și FTIR intern. Raport Semafor în 24h — detectăm contaminanții și uzura instalațiilor înainte de avarie. Analize pentru utilaje industriale, hidraulice și flote.",
+  keywords: "analiza ulei industrial, diagnoza ulei, ICP-OES, FTIR ulei, raport semafor, analiza spectrala ulei, ulei hidraulic, diagnoza preventiva utilaje",
 };
 
 export default function LaboratorPage() {
@@ -174,7 +174,7 @@ export default function LaboratorPage() {
             <div className="semafor-status">
               <div className="semafor-status-dot red" />
               <h3>Roșu — Intervenție</h3>
-              <p>Limită critică depășită. Schimb de ulei sau revizie mecanică urgentă înainte de urmatoarea cursă.</p>
+              <p>Limită critică depășită. Schimb de ulei sau revizie urgentă înainte de reluarea funcționării instalației.</p>
             </div>
           </div>
 
@@ -182,7 +182,7 @@ export default function LaboratorPage() {
             <div className="semafor-table-header">
               <div>
                 <span className="label">Raport Diagnoză · Exemplu</span>
-                <strong>Motor Scania R500 · BV 12 XYZ · 148.320 km</strong>
+                <strong>Instalație Hidraulică · Hală Producție · 5.800 ore funcționare</strong>
               </div>
               <span className="badge badge-blue">PDF generat automat</span>
             </div>
@@ -269,9 +269,9 @@ export default function LaboratorPage() {
             <div className="semafor-footer">
               <p>
                 <strong>Recomandare Allied:</strong>{" "}
-                Glicol detectat indică o infiltrare la garnitura de chiulasă.
-                Schimb de ulei imediat obligatoriu — motorul riscă gripare
-                ireversibilă în 2–4 săptămâni fără intervenție.
+                Glicol detectat indică o infiltrare la circuitul de răcire al instalației.
+                Înlocuire ulei hidraulic imediat obligatorie — pompa și distribuitorul
+                riscă deteriorare ireversibilă în 2–4 săptămâni fără intervenție.
               </p>
             </div>
           </div>

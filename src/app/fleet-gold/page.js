@@ -209,7 +209,7 @@ export default function FleetGoldPage() {
               <div className="passport-card-top">
                 <div>
                   <span className="passport-label">Pașaport Tehnic Allied</span>
-                  <strong>Scania R500 · BV 12 XYZ</strong>
+                  <strong>Arzător Industrial · Hală Producție Nord</strong>
                 </div>
                 <span className="passport-status-badge green">Sănătos</span>
               </div>
@@ -223,8 +223,8 @@ export default function FleetGoldPage() {
                   <strong>14 total</strong>
                 </div>
                 <div className="passport-stat-row">
-                  <span>Km la ultima schimbare</span>
-                  <strong>148.320 km</strong>
+                  <span>Ore la ultima schimbare</span>
+                  <strong>3.200 ore</strong>
                 </div>
                 <div className="passport-stat-row">
                   <span>Tendință uzură Fe</span>

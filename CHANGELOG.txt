@@ -1,0 +1,94 @@
+CE AM SCHIMBAT PE SITE
+Allied Green Energy - Mai 2026
+________________________________
+
+
+PE TOATE PAGINILE
+-----------------
+
+- Am pus logo-ul real al firmei (primit de la client ca fisier SVG)
+- Am schimbat verdele si albastrul sa fie exact culorile din logo
+- Am marit bara de navigatie de sus ca sa arate mai bine
+- Am adaugat un buton verde de WhatsApp in coltul din dreapta-jos
+  (sursa: Brief de proiect.pdf)
+- Am adaugat titluri si descrieri pentru Google (SEO)
+  (sursa: Cuvinte cheie SEO.pdf)
+
+
+PAGINA PRINCIPALA
+-----------------
+
+- Am adaugat o diagrama circulara "Cercul Increderii Allied"
+  care arata cele 4 etape: Colectare > Analiza > Rafinare > Livrare
+
+
+PAGINA COLECTARE
+----------------
+
+- Am adaugat un ghid cu ce uleiuri acceptam si ce nu acceptam
+  (sursa: Da 8_ghid de colectare corecta.pdf)
+
+- Am refacut sectiunea cu tipurile de clienti:
+  Transport, Constructii, Agricultura, Industrie
+  (sursa: Cum asezam asta in pagina de colectare.pdf)
+
+- Am adaugat o sectiune cu toate cele 42 de judete acoperite
+  (sursa: Brief de proiect.pdf + Vreau sa le tratam pe fiecare separat.pdf)
+
+
+PAGINA LABORATOR
+----------------
+
+- Am adaugat un tabel demonstrativ cu Raportul Semafor
+  (Verde = bine, Galben = atentie, Rosu = pericol)
+  care arata cum arata un raport real de analiza ulei
+  (sursa: Pilonul 2.pdf + Raport de sanatate al motorului.pdf)
+
+- Am adaugat preturile echipamentelor de analiza pe 3 niveluri:
+  Nivelul 1: 1.000 - 1.300 EUR
+  Nivelul 2: 4.500 - 6.500 EUR
+  Nivelul 3: pana la 60.000 EUR
+  (sursa: Avem si preturi.pdf)
+
+
+PAGINA RAFINARE
+---------------
+
+- Am adaugat al doilea produs: Ulei de Baza Rerafinat, cu specificatiile lui
+  (sursa: Fara bitum te rog.pdf + Da 6.pdf)
+
+- Am adaugat cei 3 pasi de fabricare a Ecotherm Light 4:
+  Rafinare > Standardizare > Certificare
+  (sursa: Prin re-rafinare se creeaza un amestec de fractii.pdf)
+
+- Am adaugat confirmarea ca procesele respecta normele europene BAT
+  (sursa: Rerafinare termo-chimica conform BAT mediu.pdf)
+
+- Am adaugat sectiunea Garantia Anti-Frauda cu 4 puncte:
+  cuburi sigilate, proba martor 90 zile, buletin per lot, trasabilitate
+  (sursa: Diferentiatorul.pdf)
+
+
+PAGINA FLEET GOLD
+-----------------
+
+- Am adaugat 3 pachete cu preturi: Esential, Pro, Enterprise
+  (sursa: Programul Allied Fleet Gold.pdf + Centru de comanda client Gold.pdf)
+
+- Am adaugat sectiunea Pasaport Tehnic Digital
+  cu un exemplu vizual al cardului pe vehicul
+  (sursa: Pasaportul tehnic digital.pdf)
+
+- Am corectat o greseala de scriere din text
+
+- Am actualizat exemplul din cardul Pasaport Tehnic Digital
+  sa arate un arzator industrial (hala de productie),
+  nu un vehicul — consistent cu profilul clientilor Allied
+
+
+________________________________
+CE MAI RAMANE DE FACUT
+
+- Calculator care estimeaza economia clientului
+- Pagina cu articole tehnice
+- Zona privata pentru clientii Gold (necesita programare suplimentara)

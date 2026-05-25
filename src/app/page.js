@@ -179,42 +179,36 @@ export default function HomePage() {
           <div className="tc-wrap">
             <div className="tc-diagram">
 
-              <svg className="tc-svg" viewBox="0 0 480 480" aria-hidden="true">
+              <svg className="tc-svg" viewBox="0 0 600 600" aria-hidden="true">
                 <defs>
-                  <marker id="arr-g" viewBox="0 0 8 8" refX="7" refY="4"
-                    markerWidth="5" markerHeight="5" orient="auto">
-                    <path d="M0 0 L8 4 L0 8 Z" fill="rgba(46,171,92,0.7)"/>
+                  <marker id="arr-g" viewBox="0 0 10 10" refX="9" refY="5"
+                    markerWidth="6" markerHeight="6" orient="auto">
+                    <path d="M0 0 L10 5 L0 10 Z" fill="rgba(46,171,92,0.75)"/>
                   </marker>
-                  <marker id="arr-b" viewBox="0 0 8 8" refX="7" refY="4"
-                    markerWidth="5" markerHeight="5" orient="auto">
-                    <path d="M0 0 L8 4 L0 8 Z" fill="rgba(0,92,169,0.7)"/>
+                  <marker id="arr-b" viewBox="0 0 10 10" refX="9" refY="5"
+                    markerWidth="6" markerHeight="6" orient="auto">
+                    <path d="M0 0 L10 5 L0 10 Z" fill="rgba(0,92,169,0.75)"/>
                   </marker>
                 </defs>
 
-                <circle cx="240" cy="240" r="140"
-                  fill="none"
-                  stroke="rgba(46,171,92,0.1)"
-                  strokeWidth="1"
-                  strokeDasharray="6 5"/>
-
                 {/* Colectare → Analiză */}
-                <path d="M 264.3 102.1 A 140 140 0 0 1 377.9 215.7"
-                  fill="none" stroke="rgba(46,171,92,0.45)" strokeWidth="1.5"
+                <path d="M 330.4 127.7 A 175 175 0 0 1 472.3 269.6"
+                  fill="none" stroke="rgba(46,171,92,0.5)" strokeWidth="2"
                   markerEnd="url(#arr-g)"/>
 
                 {/* Analiză → Rerafinare */}
-                <path d="M 377.9 264.3 A 140 140 0 0 1 264.3 377.9"
-                  fill="none" stroke="rgba(0,92,169,0.45)" strokeWidth="1.5"
+                <path d="M 472.3 330.4 A 175 175 0 0 1 330.4 472.3"
+                  fill="none" stroke="rgba(0,92,169,0.5)" strokeWidth="2"
                   markerEnd="url(#arr-b)"/>
 
                 {/* Rerafinare → Livrare */}
-                <path d="M 215.7 377.9 A 140 140 0 0 1 102.1 264.3"
-                  fill="none" stroke="rgba(46,171,92,0.45)" strokeWidth="1.5"
+                <path d="M 269.6 472.3 A 175 175 0 0 1 127.7 330.4"
+                  fill="none" stroke="rgba(46,171,92,0.5)" strokeWidth="2"
                   markerEnd="url(#arr-g)"/>
 
                 {/* Livrare → Colectare */}
-                <path d="M 102.1 215.7 A 140 140 0 0 1 215.7 102.1"
-                  fill="none" stroke="rgba(0,92,169,0.45)" strokeWidth="1.5"
+                <path d="M 127.7 269.6 A 175 175 0 0 1 269.6 127.7"
+                  fill="none" stroke="rgba(0,92,169,0.5)" strokeWidth="2"
                   markerEnd="url(#arr-b)"/>
               </svg>
 
@@ -225,7 +219,7 @@ export default function HomePage() {
 
               <div className="tc-node tc-top">
                 <div className="tc-icon g">
-                  <Truck size={18} color="var(--green-mid)" />
+                  <Truck size={22} color="var(--green-mid)" />
                 </div>
                 <div className="tc-num">01</div>
                 <div className="tc-label">Colectare</div>
@@ -234,7 +228,7 @@ export default function HomePage() {
 
               <div className="tc-node tc-right">
                 <div className="tc-icon b">
-                  <Microscope size={18} color="var(--blue-mid)" />
+                  <Microscope size={22} color="var(--blue-mid)" />
                 </div>
                 <div className="tc-num">02</div>
                 <div className="tc-label">Analiză</div>
@@ -243,7 +237,7 @@ export default function HomePage() {
 
               <div className="tc-node tc-bottom">
                 <div className="tc-icon g">
-                  <FlaskConical size={18} color="var(--green-mid)" />
+                  <FlaskConical size={22} color="var(--green-mid)" />
                 </div>
                 <div className="tc-num">03</div>
                 <div className="tc-label">Rerafinare</div>
@@ -252,7 +246,7 @@ export default function HomePage() {
 
               <div className="tc-node tc-left">
                 <div className="tc-icon b">
-                  <Package size={18} color="var(--blue-mid)" />
+                  <Package size={22} color="var(--blue-mid)" />
                 </div>
                 <div className="tc-num">04</div>
                 <div className="tc-label">Livrare</div>
