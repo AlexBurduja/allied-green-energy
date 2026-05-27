@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Droplets, ShieldCheck, Leaf, FlaskConical, SlidersHorizontal, BadgeCheck } from "lucide-react";
+import PhotoSlider from "@/components/PhotoSlider";
 
 export const metadata = {
   title: "Combustibil Industrial Ecotherm & Ulei Rerafinat — Allied Green Energy",
@@ -171,6 +173,21 @@ export default function RafinarePage() {
         </div>
       </section>
 
+      <section className="rafinarie-foto-section">
+        <div className="container">
+          <div className="rafinarie-foto-wrap">
+            <Image
+              src="/images/slider-rezervoare-exterior.jpg"
+              alt="Instalația de rerafinare Allied Green Energy"
+              width={1200}
+              height={800}
+              style={{ width: '100%', height: '420px', objectFit: 'cover', borderRadius: '10px' }}
+            />
+            <div className="rafinarie-foto-badge">Instalația noastră · Rerafinare industrială</div>
+          </div>
+        </div>
+      </section>
+
       <section className="antifrauda-section">
         <div className="container">
 
@@ -315,6 +332,55 @@ export default function RafinarePage() {
 
         </div>
       </section>
+      <PhotoSlider
+        tag="Lucrări Efectuate"
+        title="Instalări reale. Rezultate reale."
+        subtitle="Arzătoare Riello instalate și pornite de echipa Allied la clienți industriali."
+        slides={[
+          {
+            src: '/images/slider-arzator-instalat.jpg',
+            alt: 'Arzător Riello instalat de Allied Green Energy',
+            label: 'Arzător Industrial',
+            desc: 'Riello instalat și pornit — combustibil Ecotherm Light 4',
+          },
+          {
+            src: '/images/lucrare-01.jpg',
+            alt: 'Lucrare instalare arzător Allied Green Energy',
+            label: 'Lucrare Efectuată',
+            desc: 'Instalare și punere în funcțiune la client industrial',
+          },
+          {
+            src: '/images/lucrare-02.jpg',
+            alt: 'Lucrare instalare arzător Allied Green Energy',
+            label: 'Service Arzătoare',
+            desc: 'Verificare și calibrare arzător industrial',
+          },
+          {
+            src: '/images/lucrare-03.jpg',
+            alt: 'Echipă Allied la lucrare de instalare arzător',
+            label: 'Echipă Specializată',
+            desc: 'Specialiști Allied — intervenție la hală de producție',
+          },
+          {
+            src: '/images/lucrare-04.jpg',
+            alt: 'Arzător industrial instalat și funcțional',
+            label: 'Lucrare Finalizată',
+            desc: 'Arzător funcțional pe combustibil Ecotherm — zero emisii neconforme',
+          },
+          {
+            src: '/images/lucrare-05.jpg',
+            alt: 'Instalație industrială Allied Green Energy',
+            label: 'Instalație Industrială',
+            desc: 'Infrastructură proprie, operată de Allied',
+          },
+          {
+            src: '/images/lucrare-06.jpg',
+            alt: 'Tehnicieni Allied la lucru pe arzătoare',
+            label: 'Service Preventiv',
+            desc: 'Revizie periodică și curățare arzător în program Fleet Gold',
+          },
+        ]}
+      />
     </>
   );
 }

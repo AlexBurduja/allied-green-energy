@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   Package,
 } from "lucide-react";
+import HeroBgSlider from "@/components/HeroBgSlider";
 
 export default function HomePage() {
   return (
@@ -17,78 +18,69 @@ export default function HomePage() {
         <div className="hero-grid"></div>
 
         <div className="hero-inner">
-          <div>
-            <div className="hero-tag">
-              Operator autorizat · Acoperire națională
+
+          <div className="hero-top">
+            <div>
+              <div className="hero-tag">
+                Operator autorizat · Acoperire națională
+              </div>
+
+              <h1>
+                Energie din
+                <br />
+                <em>resurse circulare.</em>
+                <br />
+                Precizie de laborator.
+              </h1>
+
+              <p className="hero-sub">
+                Colectăm uleiul uzat de la tine. Îl analizăm în
+                laboratorul propriu. Îl rerafinăm în combustibil
+                industrial. Totul documentat, totul trasabil.
+              </p>
+
+              <div className="hero-btns">
+                <Link href="/colectare" className="btn btn-green">
+                  Comandă Colectare
+                </Link>
+
+                <Link href="/laborator" className="btn btn-outline-light">
+                  Diagnoză Flotă
+                </Link>
+              </div>
             </div>
 
-            <h1>
-              Energie din
-              <br />
-              <em>resurse circulare.</em>
-              <br />
-              Precizie de laborator.
-            </h1>
+            <div className="lab-hero-photo">
+              <HeroBgSlider images={[
+                { src: '/images/slider-rezervoare-exterior.jpg', alt: 'Rezervoare industriale Allied Green Energy' },
+                { src: '/images/slider-van-colectare.jpg',       alt: 'Vehicul de colectare Allied Green Energy' },
+                { src: '/images/slider-rezervoare-cosuri.jpg',   alt: 'Instalație de rerafinare Allied Green Energy' },
+                { src: '/images/slider-rezervor-industrial.jpg', alt: 'Rezervor industrial Allied Green Energy' },
+              ]} />
+            </div>
+          </div>
 
-            <p className="hero-sub">
-              Colectăm uleiul uzat de la tine. Îl analizăm în
-              laboratorul propriu. Îl rerafinăm în combustibil
-              industrial. Totul documentat, totul trasabil.
-            </p>
-
-            <div className="hero-btns">
-              <Link href="/colectare" className="btn btn-green">
-                Comandă Colectare
-              </Link>
-
-              <Link href="/laborator" className="btn btn-outline-light">
-                Diagnoză Flotă
-              </Link>
+          <div className="hero-stats-row">
+            <div className="hero-stat">
+              <div className="stat-num">48<span>h</span></div>
+              <div className="stat-label">Timp maxim de răspuns național</div>
+            </div>
+            <div className="hero-stat">
+              <div className="stat-num">4<span>+</span></div>
+              <div className="stat-label">Piloni de servicii integrate</div>
+            </div>
+            <div className="hero-stat">
+              <div className="stat-num">100<span>%</span></div>
+              <div className="stat-label">Conformitate legală garantată</div>
+            </div>
+            <div className="hero-stat">
+              <div className="stat-num">BAT</div>
+              <div className="stat-label">Standarde europene de mediu</div>
             </div>
           </div>
 
-          <div className="hero-stats">
-            <div className="stat-row">
-              <div className="stat-item">
-                <div className="stat-num">
-                  48<span>h</span>
-                </div>
-                <div className="stat-label">
-                  Timp maxim de răspuns național
-                </div>
-              </div>
-
-              <div className="stat-item">
-                <div className="stat-num">
-                  4<span>+</span>
-                </div>
-                <div className="stat-label">
-                  Piloni de servicii integrate
-                </div>
-              </div>
-            </div>
-
-            <div className="stat-row">
-              <div className="stat-item">
-                <div className="stat-num">
-                  100<span>%</span>
-                </div>
-                <div className="stat-label">
-                  Conformitate legală garantată
-                </div>
-              </div>
-
-              <div className="stat-item">
-                <div className="stat-num">
-                  BAT
-                </div>
-                <div className="stat-label">
-                  Standarde europene de mediu
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+
       </section>
 
       <section className="pillars-section">

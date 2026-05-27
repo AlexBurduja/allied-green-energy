@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Truck, Scale, MapPin, CheckCircle, XCircle, HardHat, Tractor, Factory } from "lucide-react";
+import HeroBgSlider from "@/components/HeroBgSlider";
 
 export const metadata = {
   title: "Colectare Ulei Uzat — Allied Green Energy",
@@ -15,24 +16,47 @@ export default function ColectarePage() {
         <div className="page-hero-grid"></div>
 
         <div className="page-hero-inner">
-          <div className="breadcrumb">
-            <Link href="/">Acasă</Link>
-            <span>›</span>
-            <span>Colectare & Logistică</span>
+          <div className="lab-hero-split">
+
+            <div>
+              <div className="breadcrumb">
+                <Link href="/">Acasă</Link>
+                <span>›</span>
+                <span>Colectare & Logistică</span>
+              </div>
+
+              <div className="page-hero-tag">Pilonul 01 — Colectare & Logistică</div>
+
+              <h1>
+                Colectare rapidă.
+                <br />
+                <em>Documentație completă.</em>
+              </h1>
+
+              <p>
+                Ridicăm, documentăm și valorificăm uleiul uzat.
+                Tu nu mai ai nimic de gestionat.
+              </p>
+
+              <div style={{ marginTop: "2rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+                <Link href="/contact" className="btn btn-green">
+                  Comandă Colectare
+                </Link>
+                <Link href="/fleet-gold" className="btn btn-outline-light">
+                  Program Fleet Gold
+                </Link>
+              </div>
+            </div>
+
+            <div className="lab-hero-photo">
+              <HeroBgSlider images={[
+                { src: '/images/slider-van-colectare.jpg', alt: 'Vehicul Allied Green Energy echipat pentru colectare ulei uzat' },
+                { src: '/images/colectare-01.jpg',         alt: 'Colectare ulei uzat Allied Green Energy' },
+                { src: '/images/colectare-02.jpg',         alt: 'Colectare ulei uzat Allied Green Energy' },
+              ]} />
+            </div>
+
           </div>
-
-          <div className="page-hero-tag">Pilonul 01 — Colectare & Logistică</div>
-
-          <h1>
-            Colectare rapidă.
-            <br />
-            <em>Documentație completă.</em>
-          </h1>
-
-          <p>
-            Ridicăm, documentăm și valorificăm uleiul uzat.
-            Tu nu mai ai nimic de gestionat.
-          </p>
         </div>
       </div>
 

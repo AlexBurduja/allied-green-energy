@@ -1,5 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import { TestTube, Droplets, Flame, Package, FlaskConical, FileText, Cpu, Microscope, Zap } from "lucide-react";
+import PhotoSlider from "@/components/PhotoSlider";
+import HeroBgSlider from "@/components/HeroBgSlider";
 
 export const metadata = {
   title: "Analiză Ulei Industrial & Diagnoză — Allied Green Energy",
@@ -15,35 +18,50 @@ export default function LaboratorPage() {
         <div className="page-hero-grid"></div>
 
         <div className="page-hero-inner">
-          <div className="breadcrumb">
-            <Link href="/">Acasă</Link>
-            <span>›</span>
-            <span>Laborator & Diagnoză</span>
-          </div>
+          <div className="lab-hero-split">
 
-          <div className="page-hero-tag blue-tag">
-            Pilonul 02 — Diagnoză Moleculară
-          </div>
+            <div>
+              <div className="breadcrumb">
+                <Link href="/">Acasă</Link>
+                <span>›</span>
+                <span>Laborator & Diagnoză</span>
+              </div>
 
-          <h1>
-            Uleiul tău uzat
-            <br />
-            <em className="blue">are o poveste de spus.</em>
-          </h1>
+              <div className="page-hero-tag blue-tag">
+                Pilonul 02 — Diagnoză Moleculară
+              </div>
 
-          <p>
-            ICP-OES, FTIR, viscozimetru — analizăm intern,
-            nu trimitem probe la terți. Raportul ajunge la tine
-            în 24h cu recomandări clare de intervenție.
-          </p>
+              <h1>
+                Uleiul tău uzat
+                <br />
+                <em className="blue">are o poveste de spus.</em>
+              </h1>
 
-          <div style={{ marginTop: "2rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <Link href="/contact" className="btn btn-blue">
-              Solicită Kit
-            </Link>
-            <Link href="/fleet-gold" className="btn btn-outline-light">
-              Program Fleet Gold
-            </Link>
+              <p>
+                Analizăm intern, nu trimitem probe la terți.
+                Raportul ajunge la tine în 24h cu recomandări
+                clare de intervenție.
+              </p>
+
+              <div style={{ marginTop: "2rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+                <Link href="/contact" className="btn btn-blue">
+                  Solicită Kit
+                </Link>
+                <Link href="/fleet-gold" className="btn btn-outline-light">
+                  Program Fleet Gold
+                </Link>
+              </div>
+            </div>
+
+            <div className="lab-hero-photo">
+              <HeroBgSlider images={[
+                { src: '/images/lab-banc.jpg',       alt: 'Laborator Allied Green Energy' },
+                { src: '/images/lab-echipamente.jpg', alt: 'Echipamente analiză ulei Allied' },
+                { src: '/images/lab-interior-01.jpg', alt: 'Interior laborator Allied' },
+                { src: '/images/lab-interior-03.jpg', alt: 'Interior laborator Allied' },
+              ]} />
+            </div>
+
           </div>
         </div>
       </div>
@@ -90,6 +108,41 @@ export default function LaboratorPage() {
                 temperaturi extreme și punctul de inflamabilitate.
                 Uleiul supraîncălzit nu mai protejează.
               </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section className="lab-proof-section">
+        <div className="container">
+          <div className="lab-proof-grid">
+
+            <div className="lab-proof-img">
+              <Image
+                src="/images/lab-kit.jpg"
+                alt="Kit de prelevare ulei Allied Green Energy"
+                width={560}
+                height={560}
+                style={{ width: '100%', height: 'auto', borderRadius: '10px' }}
+              />
+            </div>
+
+            <div className="lab-proof-text">
+              <div className="section-tag blue">Kit Diagnoză</div>
+              <h2>Totul pornește<br /><em className="blue">de la o probă.</em></h2>
+              <p>
+                Trimitem kit-ul direct la tine. Colectezi 100ml
+                de ulei la temperatura de operare și trimiți înapoi
+                cu curierul nostru.
+              </p>
+              <p>
+                În 24h ai raportul — fără deplasări,
+                fără cunoștințe tehnice necesare.
+              </p>
+              <Link href="/contact" className="btn btn-blue" style={{ marginTop: '1.5rem', display: 'inline-flex' }}>
+                Solicită kit-ul gratuit
+              </Link>
             </div>
 
           </div>
@@ -278,6 +331,45 @@ export default function LaboratorPage() {
 
         </div>
       </section>
+      <PhotoSlider
+        tag="Laboratorul Nostru"
+        title="Văzut de aproape."
+        subtitle="Echipamente proprii, analize interne — fără terți, fără întârzieri."
+        tagColor="blue"
+        slides={[
+          {
+            src: '/images/lab-banc.jpg',
+            alt: 'Banca de lucru din laboratorul Allied Green Energy',
+            label: 'Laboratorul nostru intern',
+          },
+          {
+            src: '/images/lab-balone.jpg',
+            alt: 'Testare formulă combustibil în laborator Allied Green Energy',
+            label: 'Cercetare & Dezvoltare',
+          },
+          {
+            src: '/images/lab-echipamente.jpg',
+            alt: 'Echipamente de analiză ulei Allied Green Energy',
+            label: 'Echipamente de precizie',
+          },
+          {
+            src: '/images/lab-interior-01.jpg',
+            alt: 'Interior laborator Allied Green Energy',
+            label: 'Spaţiu de lucru',
+          },
+          {
+            src: '/images/lab-interior-02.jpg',
+            alt: 'Interior laborator Allied Green Energy',
+            label: 'Analiză internă',
+          },
+          {
+            src: '/images/lab-interior-03.jpg',
+            alt: 'Interior laborator Allied Green Energy',
+            label: 'Trasabilitate completă',
+          },
+        ]}
+      />
+
       <section className="equip-section">
         <div className="container">
 
