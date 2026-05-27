@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { TestTube, Droplets, Flame, Package, FlaskConical, FileText, Cpu, Microscope, Zap } from "lucide-react";
 import PhotoSlider from "@/components/PhotoSlider";
 import HeroBgSlider from "@/components/HeroBgSlider";
@@ -114,40 +113,6 @@ export default function LaboratorPage() {
         </div>
       </section>
 
-      <section className="lab-proof-section">
-        <div className="container">
-          <div className="lab-proof-grid">
-
-            <div className="lab-proof-img">
-              <Image
-                src="/images/lab-kit.jpg"
-                alt="Kit de prelevare ulei Allied Green Energy"
-                width={560}
-                height={560}
-                style={{ width: '100%', height: 'auto', borderRadius: '10px' }}
-              />
-            </div>
-
-            <div className="lab-proof-text">
-              <div className="section-tag blue">Kit Diagnoză</div>
-              <h2>Totul pornește<br /><em className="blue">de la o probă.</em></h2>
-              <p>
-                Trimitem kit-ul direct la tine. Colectezi 100ml
-                de ulei la temperatura de operare și trimiți înapoi
-                cu curierul nostru.
-              </p>
-              <p>
-                În 24h ai raportul — fără deplasări,
-                fără cunoștințe tehnice necesare.
-              </p>
-              <Link href="/contact" className="btn btn-blue" style={{ marginTop: '1.5rem', display: 'inline-flex' }}>
-                Solicită kit-ul gratuit
-              </Link>
-            </div>
-
-          </div>
-        </div>
-      </section>
 
       <section className="process-section">
         <div className="container">
